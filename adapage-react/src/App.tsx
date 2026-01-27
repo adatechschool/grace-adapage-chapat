@@ -8,12 +8,10 @@ function App() {
     <>
       <div>
         
-        <p>hello world
-        </p>
+        <h1 className='bg-blue'>hello world</h1>
+        
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </>
   )
 }
