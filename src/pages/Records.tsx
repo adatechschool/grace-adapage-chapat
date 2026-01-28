@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Records() {
   return (
     <div classname="p-10">
@@ -6,3 +7,21 @@ export default function Records() {
     </div>
   );
 }
+=======
+import { useParams } from 'react-router-dom'
+
+export default function Records() {
+
+const { id } = useParams()
+
+console.log("ID from params:", id)
+
+  return (
+    <div>
+      <h1>Records Page</h1>
+      {id && <p>Detail for ID: {id}</p>}
+    </div>
+  )
+
+}
+>>>>>>> 1b2d0b6 (recup pat)
