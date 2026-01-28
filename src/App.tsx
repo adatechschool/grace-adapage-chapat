@@ -41,7 +41,8 @@ function App() {
           >
             Formules Magiques
           </Link>
-        </div>
+          </div>
+        
       </header>
 
       <main>
@@ -57,4 +58,3 @@ function App() {
 }
 
 export default App;
-
