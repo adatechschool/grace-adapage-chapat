@@ -12,18 +12,18 @@ function App() {
     <>
       <header>
         <Link to="/"
-        className="bg-gray-200 flex items-center justify-center p-4 mb-10">
+        className="bg-gray-200 flex items-center justify-center p-4">
 
           <img
             src="/images/logo.png"
             alt="Logo"
-            className="w-60 items-center hover:scale-110"
+            className="w-80 items-center hover:scale-110:"
           />
           </Link>
-
+<div className="bg-gray-200 flex items-center justify-center p-4 mb-10">
           <Link
             to="/chronologie"
-            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 ml-20"
+            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 items-center"
           >
             Chronologie
           </Link>
@@ -41,7 +41,7 @@ function App() {
           >
             Formules Magiques
           </Link>
-        
+        </div>
       </header>
 
       <main>
@@ -57,3 +57,4 @@ function App() {
 }
 
 export default App;
+
