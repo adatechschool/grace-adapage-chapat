@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function FormulesMagiques() {
   return (
     <div className="p-10">
@@ -7,21 +6,3 @@ export default function FormulesMagiques() {
     </div>
   );
 }
-=======
-import { useParams } from 'react-router-dom'
-
-export default function FormulesMagiques() {
-
-const { id } = useParams()
-
-console.log("ID from params:", id)
-
-  return (
-    <div>
-      <h1>Formules Magiques Page</h1>
-      {id && <p>Detail for ID: {id}</p>}
-    </div>
-  )
-
-}
->>>>>>> 1b2d0b6 (recup pat)
