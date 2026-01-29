@@ -1,9 +1,9 @@
 export interface ChronologieItem {
   id: string;
-  titre?: string;
+  titre: string;
   date: string;
   description: string;
-  photo?: string;
+  photo: string;
 }
 
 export interface RecordItem {
@@ -11,20 +11,20 @@ export interface RecordItem {
   date: string;
   titre: string;
   description: string;
-  photo?: string;
+  photo: string;
 }
 
 export interface FormuleMagiqueItem {
   id: string;
   titre: string;
-  date?: string;
+  date: string;
   description: string;
-  photo?: string;
+  photo: string;
 }
 
 export type CardProps = {
-  title?: string;
-  subtitle?: string;
+  title: string;
+  subtitle: string;
   description: string;
-  image?: string;
+  image: string;
 };
