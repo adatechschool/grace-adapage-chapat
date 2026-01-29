@@ -13,7 +13,7 @@ function Home() {
             <img
               src="/images/presentation.jpeg"
               alt="Presentation"
-              className="rounded-4xl hover:scale-115 hover:cursor-pointer hover:shadow-lg"
+              className="rounded-4xl hover:scale-105 hover:cursor-pointer hover:shadow-lg"
             />
           </div>
         </div>

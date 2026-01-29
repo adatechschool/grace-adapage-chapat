@@ -17,10 +17,11 @@ function App() {
           <img
             src="/images/logo.png"
             alt="Logo"
-            className="w-80 items-center hover:scale-110:"
+            className="w-80 items-center hover:scale-115"
           />
           </Link>
-<div className="bg-gray-200 flex items-center justify-center p-4 mb-10">
+
+        <div className="bg-gray-200 flex items-center justify-center p-4 mb-10">
           <Link
             to="/chronologie"
             className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 items-center"
@@ -41,8 +42,7 @@ function App() {
           >
             Formules Magiques
           </Link>
-          </div>
-        
+        </div>  
       </header>
 
       <main>
