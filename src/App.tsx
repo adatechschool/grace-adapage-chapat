@@ -45,7 +45,7 @@ function App() {
         </div>  
       </header>
 
-      <main>
+      <main className="max-w-8xl mx-auto px-6">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/chronologie" element={<Chronologie />} />
