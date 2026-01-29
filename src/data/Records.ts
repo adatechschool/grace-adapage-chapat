@@ -5,7 +5,7 @@ export const records: RecordItem[] = [
     id: "1",
     date: "1981-10-31",
     description: "Plus jeune survivant d’un Avada Kedavra, à 1 an.",
-    photo: "/src/assets/images/harry_bebe.jpg"
+    photo: "/src/assets/Kedavra.jpeg"
   },
   {
     id: "2",
