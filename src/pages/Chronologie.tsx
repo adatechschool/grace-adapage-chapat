@@ -1,6 +1,6 @@
 import Card from "../components/Card";
 import { chronologie } from "../data/chronologie";
-import type { ChronologieItem } from "../type/interfaces";
+// import type { ChronologieItem } from "../type/interfaces";
 
 const ChronologiePage = () => {
   return (
@@ -9,6 +9,7 @@ const ChronologiePage = () => {
       {chronologie.map((item) => (
         <Card
           key={item.id}
+          title={<h3>{item.titre}</h3>}
           subtitle={item.date}
           description={item.description}
           image={item.photo}

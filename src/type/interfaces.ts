@@ -1,5 +1,6 @@
 export interface ChronologieItem {
   id: string;
+  titre?: string;
   date: string;
   description: string;
   photo?: string;
