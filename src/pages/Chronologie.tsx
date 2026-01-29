@@ -1,6 +1,6 @@
 import Card from "../components/Card";
 import { chronologie } from "../data/chronologie";
-// import type { ChronologieItem } from "../type/interfaces";
+//  import type { ChronologieItem } from "../type/interfaces";
 
 const ChronologiePage = () => {
   return (

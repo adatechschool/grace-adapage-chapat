@@ -9,6 +9,7 @@ export interface ChronologieItem {
 export interface RecordItem {
   id: string;
   date: string;
+  titre: string;
   description: string;
   photo?: string;
 }
@@ -27,4 +28,3 @@ export type CardProps = {
   description: string;
   image?: string;
 };
-

@@ -1,6 +1,7 @@
-import { formulesMagiques } from "../data/formules";
-import type { FormuleMagiqueItem } from "../type/interfaces";
 import Card from "../components/Card";
+import { formulesMagiques } from "../data/formules";
+// import type { FormuleMagiqueItem } from "../type/interfaces";
+
 
 
 const FormulesMagiquesPage = () => {
