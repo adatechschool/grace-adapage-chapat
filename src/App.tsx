@@ -12,7 +12,7 @@ function App() {
     <>
       <header>
         <Link to="/"
-        className="bg-gray-200 flex items-center justify-center p-4">
+        className="bg-red-800 flex items-center justify-center p-4">
 
           <img
             src="/images/logo.png"
@@ -24,21 +24,21 @@ function App() {
         <div className="bg-gray-200 flex items-center justify-center p-4 mb-10">
           <Link
             to="/chronologie"
-            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 items-center"
+            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 ml-5"
           >
             Chronologie
           </Link>
 
           <Link
             to="/records"
-            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 ml-20"
+            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 ml-5"
           >
             Records
           </Link>
 
           <Link
             to="/formulesMagiques"
-            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 ml-20"
+            className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 ml-5"
           >
             Formules Magiques
           </Link>

@@ -11,7 +11,11 @@ export const formulesMagiques: FormuleMagiqueItem[] = [
   {
     id: "2",
     titre: "Expelliarmus",
+<<<<<<< HEAD
         date: "Troisième année",
+=======
+    date: "Troisième année",
+>>>>>>> 04965c7 (dernier commit vendredi)
     photo: "/src/assets/images/formules/expeliarmus.jpg",
     description: "Sortilège de désarmement. Harry l’utilise pour neutraliser ses adversaires sans les blesser, devenant sa technique emblématique dans tous les duels.",
   },
