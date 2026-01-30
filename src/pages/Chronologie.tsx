@@ -1,23 +1,43 @@
 import Card from "../components/Card";
 import { chronologie } from "../data/chronologie";
- import type { ChronologieItem } from "../type/interfaces";
+import type { ChronologieItem } from "../type/interfaces";
 
 function ChronologiePage() {
   return (
-    <div className="flex items-center gap-8 bg-red-900 p-10 rounded-4xl mx-20">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-      {chronologie.map((item: ChronologieItem) => (
-        <Card
-          key={item.id}
-          title={item.titre}
-          subtitle={item.date}
-          description={item.description}
-          image={item.photo}
-        />
-      ))}
-    </div>
-    </div>
+    <section className="relative py-20">
+      {/* Axe central */}
+      <div className="absolute left-1/2 top-0 h-full w-1 bg-yellow-400 -translate-x-1/2"></div>
+
+      <div className="space-y-24">
+        {chronologie.map((item: ChronologieItem, index) => {
+          const isLeft = index % 2 === 0;
+
+          return (
+            <div
+              key={item.id}
+              className={`relative flex w-full ${
+                isLeft ? "justify-start pr-12" : "justify-end pl-12"
+              }`}
+            >
+              {/* Point sur l’axe */}
+              <span className="absolute left-1/2 top-8 w-6 h-6 bg-yellow-400 rounded-full -translate-x-1/2 border-4 border-red-900 z-10"></span>
+
+              {/* Carte */}
+              <div className="w-full md:max-w-sm">
+                <Card
+                  title={item.titre}
+                  subtitle={item.date}
+                  description={item.description}
+                  image={item.photo}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 
 export default ChronologiePage;
+

@@ -11,14 +11,14 @@ export const formulesMagiques: FormuleMagiqueItem[] = [
   {
     id: "2",
     titre: "Expelliarmus",
-        date: "Première année",
+        date: "Troisième année",
     photo: "/src/assets/images/formules/expeliarmus.jpg",
     description: "Sortilège de désarmement. Harry l’utilise pour neutraliser ses adversaires sans les blesser, devenant sa technique emblématique dans tous les duels.",
   },
   {
     id: "3",
     titre: "Expecto Patronum",
-    date: "Première année",
+    date: "Troisième année",
     photo: "/src/assets/images/formules/patronum.jpg",
     description: "Protège contre les Détraqueurs. Harry parvient à invoquer un Patronus corporel, symbole de son courage et de sa lumière intérieure.",
   },
