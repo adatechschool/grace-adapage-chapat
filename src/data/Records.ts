@@ -19,7 +19,7 @@ export const records: RecordItem[] = [
   },
   {
     id: "3",
-    titre: "Tournoi des Trois Sorciers",
+    titre: "Tournoi des 3 Sorciers",
     date: "1994-1995",
     description:
       "Sélectionné malgré lui par la Coupe de Feu, Harry Potter devient à 14 ans le plus jeune champion de l’histoire du Tournoi des Trois Sorciers. Confronté à des épreuves normalement réservées à des sorciers majeurs, il survit à un dragon, à une épreuve sous-marine et à un labyrinthe enchanté, remportant le tournoi au terme d’une compétition exceptionnellement dangereuse.",

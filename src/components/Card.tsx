@@ -2,80 +2,165 @@ import { useEffect, useRef, useState } from "react";
 import type { CardProps } from "../type/interfaces";
 
 const Card = ({ title, subtitle, description, image }: CardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [hasOverflow, setHasOverflow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   const textRef = useRef<HTMLParagraphElement>(null);
 
+  // Détecte si le texte dépasse (pour afficher le bouton Lire)
   useEffect(() => {
     if (!textRef.current) return;
+
     const el = textRef.current;
     setHasOverflow(el.scrollHeight > el.clientHeight);
-  }, [description, isExpanded]);
+  }, [description]);
 
   return (
-    <div className="
-      bg-white rounded-xl shadow-md overflow-hidden
-      transition hover:scale-105 hover:shadow-lg
-      flex flex-col md:flex-row gap-4 
-    ">
-      {/* IMAGE */}
-      {image && (
-
-  <img
-    src={image}
-    alt={title ?? "illustration"}
-    className="
-      w-full h-40 object-cover 
-      md:w-1/3 md:h-auto"
-        />)}
-      
-
-      {/* CONTENU */}
-      <div className="p- flex flex-col justify-between gap-3 md:p-6">
-        <div>
-          {title && (
-            <h3 className="text-base md:text-xl font-semibold leading-tight">
-              {title}
-            </h3>
-          )}
-
-          {subtitle && (
-            <p className="text-xs md:text-sm text-gray-500 mt-1">
-              {subtitle}
-            </p>
-          )}
-        </div>
-
-        <p
-          ref={textRef}
-          className={`
-            text-sm md:text-base leading-relaxed font-HarryP
-            ${isExpanded ? "line-clamp-none text-xs" : "line-clamp-6 md:line-clamp-6"} 
-
-            /* Lettrine desktop uniquement */
-            md:first-letter:text-2xl
-            md:first-letter:float-top
-            md:first-letter:mr-1
-            md:first-letter:text-yellow-500
-          `}
-        >
-          {description}
-        </p>
-
-        {hasOverflow && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
+    <>
+      {/* ================= CARD ================= */}
+      <article
+        className="
+          bg-white rounded-xl shadow-md overflow-hidden
+          flex flex-row
+          h-44 md:h-64
+        "
+      >
+        {/* IMAGE — toujours paysage */}
+        {image && (
+          <img
+            src={image}
+            alt={title ?? "illustration"}
             className="
-              self-start text-sm font-semibold
-              text-red-800 hover:underline
-              md:text-xs
+              w-1/3 md:w-2/5
+              h-full
+              object-cover
+            "
+          />
+        )}
+
+        {/* CONTENU */}
+        <div
+          className="
+            flex flex-col
+            justify-start
+            gap-3
+            p-3 md:p-6
+            w-2/3 md:w-3/5
+          "
+        >
+          {/* TITRE */}
+          <div>
+            {title && (
+              <h3 className="text-sm md:text-xl font-semibold leading-tight">
+                {title}
+              </h3>
+            )}
+
+            {subtitle && (
+              <p className="text-xs md:text-sm text-gray-500 mt-1">
+                {subtitle}
+              </p>
+            )}
+          </div>
+
+          {/* TEXTE CLAMPÉ */}
+          <p
+            ref={textRef}
+            className="
+              text-xs md:text-base leading-relaxed
+              line-clamp-3 md:line-clamp-4
             "
           >
-            {isExpanded ? "Réduire" : "Lire plus"}
-          </button>
-        )}
-      </div>
-    </div>
+            {description}
+          </p>
+
+          {/* CTA */}
+          {hasOverflow && (
+            <button
+              onClick={() => setIsOpen(true)}
+              className="
+                self-start
+                text-xs md:text-sm
+                font-semibold
+                text-red-800
+                hover:underline
+              "
+            >
+              Lire plus...
+            </button>
+          )}
+        </div>
+      </article>
+
+      {/* ================= MODAL ================= */}
+      {isOpen && (
+        <div
+          className="
+            fixed inset-0 z-50
+            flex items-center justify-center
+            bg-black/60
+          "
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="
+              bg-white rounded-xl shadow-xl
+              max-w-2xl w-full
+              mx-4 p-6
+              max-h-[80vh] overflow-y-auto
+            "
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* HEADER */}
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                {title && (
+                  <h2 className="text-xl font-bold">
+                    {title}
+                  </h2>
+                )}
+
+                {subtitle && (
+                  <p className="text-sm text-gray-500">
+                    {subtitle}
+                  </p>
+                )}
+              </div>
+
+              <button
+                onClick={() => setIsOpen(false)}
+                className="
+                  text-sm font-semibold
+                  text-red-800
+                  hover:underline
+                "
+              >
+                Fermer
+              </button>
+            </div>
+
+            {/* IMAGE */}
+            {image && (
+              <img
+                src={image}
+                alt={title ?? "illustration"}
+                className="
+                  w-full h-60
+                  object-cover
+                  rounded-lg
+                  mb-4
+                "
+              />
+            )}
+
+            {/* TEXTE COMPLET */}
+            <p className="text-base leading-relaxed">
+              {description}
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

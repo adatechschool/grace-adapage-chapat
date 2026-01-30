@@ -12,7 +12,7 @@ function App() {
     <>
       <header>
         <Link to="/"
-        className="bg-red-800 flex items-center justify-center p-4">
+        className="bg-red-900 flex items-center justify-center p-4">
 
           <img
             src="/images/logo.png"

@@ -6,7 +6,7 @@ export const chronologie: ChronologieItem[] = [
     id: "1",
     titre: "Naissance de Harry Potter",
     date: "31/07/1980",
-    description: "Naissance de Harry Potter à Godric's Hollow. Voldemort attaque ses parents mais échoue grâce au sacrifice de Lily, qui crée un puissant bouclier magique. Ce moment marque le début de la légende du <em>Garçon qui a survécu</em>.",
+    description: "Naissance de Harry Potter à Godric's Hollow. Voldemort attaque ses parents mais échoue grâce au sacrifice de Lily, qui crée un puissant bouclier magique. Ce moment marque le début de la légende du Garçon qui a survécu.",
     photo: "/src/assets/images/chronologie/naissance.jpeg",
   },
   {

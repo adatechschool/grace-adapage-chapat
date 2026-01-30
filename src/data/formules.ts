@@ -1,21 +1,17 @@
 import type { FormuleMagiqueItem } from "../type/interfaces";
 
 export const formulesMagiques: FormuleMagiqueItem[] = [
-  {
-    id: "1",
-    titre: "Alohomora",
-    date: "Première année",
-    photo: "/src/assets/images/formules/deverouillage.jpeg",
-    description: "Permet d’ouvrir des serrures simples. Utile dès le premier jour à Poudlard, Hermione l’utilise pour explorer des passages secrets sans se faire remarquer.",
-  },
+ {
+  id: "1",
+  titre: "Alohomora",
+  date: "Première année",
+  photo: "/src/assets/images/formules/deverouillage.jpeg",
+  description: "Permet d’ouvrir des serrures simples. Harry l’utilise dès sa première année pour explorer certains passages de Poudlard et récupérer des objets verrouillés. Grâce à ce sort, il peut avancer discrètement et se faufiler dans des lieux interdits sans se faire remarquer.",
+},
   {
     id: "2",
     titre: "Expelliarmus",
-<<<<<<< HEAD
         date: "Troisième année",
-=======
-    date: "Troisième année",
->>>>>>> 04965c7 (dernier commit vendredi)
     photo: "/src/assets/images/formules/expeliarmus.jpg",
     description: "Sortilège de désarmement. Harry l’utilise pour neutraliser ses adversaires sans les blesser, devenant sa technique emblématique dans tous les duels.",
   },
@@ -33,4 +29,20 @@ export const formulesMagiques: FormuleMagiqueItem[] = [
     photo: "/src/assets/images/formules/leviosa3.jpg",
     description: "Sort de lévitation, enseigné dès la première année. Permet de faire flotter des objets et de résoudre des situations délicates grâce à la précision et à la concentration.",
   },
+  {
+  id: "5",
+  titre: "Accio",
+  date: "Quatrième année",
+  photo: "/src/assets/images/formules/sort.jpg",
+  description:
+    "Sortilège d’attraction. Harry utilise ce charme pour appeler sa Firebolt lors de la première tâche du Tournoi des Trois Sorciers, puis pour ramener des objets vers lui dans diverses situations.",
+},
+{
+  id: "6",
+  titre: "Stupéfix",
+  date: "Cinquième année",
+  photo: "/src/assets/images/formules/stupefix.jpg",
+  description:
+    "Sortilège stupéfiant utilisé en duel pour neutraliser un adversaire. Harry l’emploie fréquemment avec l’Armée de Dumbledore pour immobiliser des Mangemorts ou dissuader des attaques.",
+}
 ];
