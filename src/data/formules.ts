@@ -35,7 +35,7 @@ export const formulesMagiques: FormuleMagiqueItem[] = [
   date: "Quatrième année",
   photo: "/src/assets/images/formules/sort.jpg",
   description:
-    "Sortilège d’attraction. Harry utilise ce charme pour appeler sa Firebolt lors de la première tâche du Tournoi des Trois Sorciers, puis pour ramener des objets vers lui dans diverses situations.",
+    "Sortilège d’attraction. Harry utilise ce charme pour appeler à lui son Éclair de Feu (balai volant) lors de la première tâche du Tournoi des Trois Sorciers, puis pour ramener des objets vers lui dans diverses situations.",
 },
 {
   id: "6",

@@ -8,7 +8,7 @@ function FormulesMagiquesPage() {
       
       {/* TITRE */}
       <h1 className="text-white text-3xl font-bold text-center mb-8">
-        Formules magiques emblématique de Harry Potter
+        Formules magiques emblématiques de Harry Potter
       </h1>
 
       {/* GRID — max 2 cards */}
