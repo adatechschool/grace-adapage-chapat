@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Card from "../components/Card";
-import { records } from "../data/records";
+import { records } from "../data/Records";
 import type { RecordItem } from "../type/interfaces";
 
 function RecordsPage() {
@@ -8,8 +8,6 @@ function RecordsPage() {
 
   return (
     <section className="bg-red-900 py-12 px-6 rounded-3xl max-w-7xl mx-auto">
-      
-      /* TITRE */
       <h1 className="text-white text-3xl font-bold text-center mb-8">
         Records de Harry Potter
       </h1>
@@ -28,11 +26,10 @@ function RecordsPage() {
         ))}
       </div>
 
-      {/* ===== MODAL LIRE PLUS ===== */}
+      {/*MODAL LIRE PLUS*/}
       {activeItem && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="relative bg-white rounded-xl max-w-2xl w-full mx-4 p-6">
-
             {/* Fermer */}
             <button
               onClick={() => setActiveItem(null)}
@@ -41,13 +38,9 @@ function RecordsPage() {
               Fermer
             </button>
 
-            <h2 className="text-2xl font-black mb-1">
-              {activeItem.titre}
-            </h2>
+            <h2 className="text-2xl font-black mb-1">{activeItem.titre}</h2>
 
-            <p className="text-gray-500 mb-4">
-              {activeItem.date}
-            </p>
+            <p className="text-gray-500 mb-4">{activeItem.date}</p>
 
             <img
               src={activeItem.photo}

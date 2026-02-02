@@ -1,14 +1,7 @@
 function Home() {
   return (
-    /**
-     * Section hero
-     * - Hero éditorial
-     * - Axe central fort
-     * - Largeur volontairement limitée
-     */
     <section className="relative min-h-[calc(100vh-80px)] overflow-hidden group">
-
-      {/* ================= IMAGE MOBILE ================= */}
+      {/* IMAGE MOBILE */}
       <img
         src="/src/assets/images/presentation.jpeg"
         alt="Harry Potter mobile"
@@ -20,7 +13,7 @@ function Home() {
         "
       />
 
-      {/* ================= IMAGE DESKTOP =================
+      {/*IMAGE DESKTOP
          Image centrée + largeur volontairement réduite
       */}
       <img
@@ -32,26 +25,23 @@ function Home() {
           object-cover
 
           /* Limitation forte de largeur */
-          max-w-[1200px]
+          max-w-300
           mx-auto
           left-1/2 -translate-x-1/2
 
           /* Zoom doux */
           scale-110
           group-hover:scale-125
-          transition-transform duration-[3000ms] ease-out
+          transition-transform duration-3000 ease-out
         "
       />
 
-      {/* ================= CONTENEUR TEXTE ================= */}
+      {/* CONTENEUR TEXTE */}
       <div className="relative z-10 flex h-full items-end p-6 md:p-16">
+        {/* WRAPPER CENTRAL */}
 
-        {/* ================= WRAPPER CENTRAL =================
-           → largeur volontairement étroite
-        */}
         <div className="w-full md:max-w-4xl mx-auto">
-
-          {/* ================= BLOC TEXTE ================= */}
+          {/* BLOC TEXTE */}
           <div
             className="
               max-w-2xl
@@ -62,7 +52,7 @@ function Home() {
               md:group-hover:translate-y-0
               md:group-hover:opacity-100
 
-              transition-all duration-[1200ms] ease-out
+              transition-all duration-1200 ease-out
             "
           >
             <p
@@ -88,7 +78,6 @@ function Home() {
               forces du mal.
             </p>
           </div>
-
         </div>
       </div>
     </section>

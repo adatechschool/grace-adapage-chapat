@@ -9,7 +9,7 @@ function FormulesMagiquesPage() {
   return (
     <section className="bg-red-900 py-12 px-6 rounded-3xl max-w-7xl mx-auto">
       
-      /* TITRE */
+      {/* TITRE */}
       <h1 className="text-white text-3xl font-bold text-center mb-8">
         Formules magiques emblématiques de Harry Potter
       </h1>
@@ -28,7 +28,7 @@ function FormulesMagiquesPage() {
         ))}
       </div>
 
-      {/* ===== MODAL LIRE PLUS ===== */}
+      {/*MODAL LIRE PLUS*/}
       {activeItem && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="relative bg-white rounded-xl max-w-2xl w-full mx-4 p-6">

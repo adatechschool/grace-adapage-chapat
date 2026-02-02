@@ -9,17 +9,17 @@ function ChronologiePage() {
 
   return (
     <section className="relative py-10 md:py-20 flex flex-col items-center">
-      {/* ===== Titre ===== */}
+      {/*Titre*/}
       <h1 className="text-red-900 text-4xl font-black text-center mb-12 md:mb-16">
         Quelques dates importantes
       </h1>
 
-      {/* ===== Conteneur timeline ===== */}
+      {/*Conteneur timeline*/}
       <div className="relative w-full max-w-5xl px-4 flex flex-col items-center">
         {/* Axe central */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-3 bg-yellow-400 z-0" />
 
-        /* Liste des cartes */
+        {/* Liste des cartes */}
         <div className="flex flex-col space-y-12 md:space-y-16 w-full">
           {chronologie.map((item, index) => {
             const isLeft = index % 2 === 0;
@@ -49,7 +49,7 @@ function ChronologiePage() {
         </div>
       </div>
 
-      {/* ===== MODAL LIRE PLUS ===== */}
+      {/*MODAL LIRE PLUS*/}
       {activeItem && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="relative bg-white rounded-xl max-w-3xl w-full mx-4 p-6 md:p-8">
