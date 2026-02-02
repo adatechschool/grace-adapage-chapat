@@ -34,7 +34,7 @@ function ChronologiePage() {
                 }`}
               >
                 {/* Largeur fixe des cartes = stabilité */}
-                <div className="w-full md:max-w-3xl relative z-10">
+                <div className="w-80 md:max-w-3xl relative z-5">
                   <Card
                     title={item.titre}
                     subtitle={item.date}
@@ -51,7 +51,7 @@ function ChronologiePage() {
 
       {/*MODAL LIRE PLUS*/}
       {activeItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+        <div className="fixed inset-5 z-50 flex items-center justify-center bg-black/60">
           <div className="relative bg-white rounded-xl max-w-3xl w-full mx-4 p-6 md:p-8">
 
             {/* Bouton fermer */}
