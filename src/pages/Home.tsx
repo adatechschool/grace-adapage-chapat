@@ -1,63 +1,94 @@
 function Home() {
   return (
+    /**
+     * Section hero
+     * - Hero éditorial
+     * - Axe central fort
+     * - Largeur volontairement limitée
+     */
     <section className="relative min-h-[calc(100vh-80px)] overflow-hidden group">
-      
-      {/* Image mobile */}
+
+      {/* ================= IMAGE MOBILE ================= */}
       <img
         src="/src/assets/images/presentation.jpeg"
         alt="Harry Potter mobile"
         className="
-          absolute inset-0 h-full w-full object-cover
+          absolute inset-0
+          h-full w-full
+          object-cover
           md:hidden
         "
       />
 
-      {/* Image desktop */}
+      {/* ================= IMAGE DESKTOP =================
+         Image centrée + largeur volontairement réduite
+      */}
       <img
         src="/src/assets/images/Harry_Potter_04.jpg"
         alt="Harry Potter"
         className="
-          absolute inset-0 h-full w-full object-cover
+          absolute inset-0
           hidden md:block
+          object-cover
+
+          /* Limitation forte de largeur */
+          max-w-[1200px]
+          mx-auto
+          left-1/2 -translate-x-1/2
+
+          /* Zoom doux */
           scale-110
-          md:group-hover:scale-125
-          transition-transform duration:3000 ease-out
+          group-hover:scale-125
+          transition-transform duration-[3000ms] ease-out
         "
       />
 
+      {/* ================= CONTENEUR TEXTE ================= */}
+      <div className="relative z-10 flex h-full items-end p-6 md:p-16">
 
-      {/* Contenu texte */}
-      <div className="relative z-10 flex h-full items-end p-8 md:p-20">
-        <div
-          className="
-            max-w-3xl
-            text-white
-            md:translate-y-8 md:opacity-0
-            md:group-hover:translate-y-0 md:group-hover:opacity-100
-            transition-all duration:1500ms ease-out
-          "
-        >
-          <p
+        {/* ================= WRAPPER CENTRAL =================
+           → largeur volontairement étroite
+        */}
+        <div className="w-full md:max-w-4xl mx-auto">
+
+          {/* ================= BLOC TEXTE ================= */}
+          <div
             className="
-              text-lg md:text-xl lg:text-2xl
-              leading-[1.8]
-              font-HarryP
+              max-w-2xl
+              text-white
 
-              first-letter:text-8xl
-              md:first-letter:text-9xl
-              lg:first-letter:text-[10rem]
+              md:translate-y-6
+              md:opacity-0
+              md:group-hover:translate-y-0
+              md:group-hover:opacity-100
 
-              first-letter:font-bold
-              first-letter:float-left
-              first-letter:mr-4
-              first-letter:-mt-2
-              first-letter:text-yellow-500
+              transition-all duration-[1200ms] ease-out
             "
           >
-            Sorcier britannique, survivant de la malédiction de Voldemort,
-            élève de Gryffondor devenu le symbole de la résistance contre les
-            forces du mal.
-          </p>
+            <p
+              className="
+                text-lg md:text-xl
+                leading-[1.85]
+                font-HarryP
+
+                /* Lettrine */
+                first-letter:text-7xl
+                md:first-letter:text-8xl
+                lg:first-letter:text-9xl
+
+                first-letter:font-bold
+                first-letter:float-left
+                first-letter:mr-4
+                first-letter:-mt-1
+                first-letter:text-yellow-500
+              "
+            >
+              Sorcier britannique, survivant de la malédiction de Voldemort,
+              élève de Gryffondor devenu le symbole de la résistance contre les
+              forces du mal.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

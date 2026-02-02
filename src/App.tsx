@@ -12,7 +12,7 @@ function App() {
     <>
       <header>
         <Link to="/"
-        className="bg-red-900 flex items-center justify-center p-4">
+        className="bg-red-900 flex items-center justify-center p-4 mb-10 hover:bg-red-800">
 
           <img
             src="/images/logo.png"
