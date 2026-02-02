@@ -12,7 +12,7 @@ function App() {
     <>
       <header>
         <Link to="/"
-        className="bg-red-900 flex items-center justify-center p-4 mb-10 hover:bg-red-800">
+        className="bg-red-900 flex items-center justify-center p-4 hover:bg-red-800">
 
           <img
             src="/images/logo.png"
@@ -21,7 +21,7 @@ function App() {
           />
           </Link>
 
-        <div className="bg-gray-200 flex items-center justify-center p-4 mb-10">
+        <div className="bg-gray-200 flex items-center justify-center p-4">
           <Link
             to="/chronologie"
             className="px-4 py-2 rounded-2xl bg-yellow-400 hover:bg-yellow-500 ml-5"

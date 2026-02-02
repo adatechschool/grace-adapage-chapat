@@ -10,7 +10,7 @@ function ChronologiePage() {
   return (
     <section className="relative py-10 md:py-20 flex flex-col items-center">
       {/*Titre*/}
-      <h1 className="text-red-900 text-4xl font-black text-center mb-12 md:mb-16">
+      <h1 className="text-red-900 text-4xl font-black text-center mb-12 md:mb-12">
         Quelques dates importantes
       </h1>
 
@@ -20,7 +20,7 @@ function ChronologiePage() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-3 bg-yellow-400 z-0" />
 
         {/* Liste des cartes */}
-        <div className="flex flex-col space-y-12 md:space-y-16 w-full">
+        <div className="flex flex-col space-y-4 md:space-y-16 w-full">
           {chronologie.map((item, index) => {
             const isLeft = index % 2 === 0;
 
@@ -29,12 +29,12 @@ function ChronologiePage() {
                 key={item.id}
                 className={`relative flex w-full ${
                   isLeft
-                    ? "justify-start pr-4 md:pr-12"
-                    : "justify-end pl-4 md:pl-12"
+                    ? "justify-start pr-2 md:pr-4"
+                    : "justify-end pl-1 md:pl-1"
                 }`}
               >
                 {/* Largeur fixe des cartes = stabilité */}
-                <div className="w-80 md:max-w-3xl relative z-5">
+                <div className="w-80 md:max-w-2xl">
                   <Card
                     title={item.titre}
                     subtitle={item.date}
