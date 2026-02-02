@@ -19,7 +19,7 @@ function ChronologiePage() {
         {/* Axe central */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-3 bg-yellow-400 z-0" />
 
-        {/* Liste des cartes */}
+        /* Liste des cartes */
         <div className="flex flex-col space-y-12 md:space-y-16 w-full">
           {chronologie.map((item, index) => {
             const isLeft = index % 2 === 0;

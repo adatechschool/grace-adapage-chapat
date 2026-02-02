@@ -10,10 +10,10 @@ export const formulesMagiques: FormuleMagiqueItem[] = [
 },
   {
     id: "2",
-    titre: "Expelliarmus",
-        date: "Troisième année",
-    photo: "/src/assets/images/formules/expeliarmus.jpg",
-    description: "Sortilège de désarmement. Harry l’utilise pour neutraliser ses adversaires sans les blesser, devenant sa technique emblématique dans tous les duels.",
+    titre: "Wingardium Leviosa",
+    date: "Première année",
+    photo: "/src/assets/images/formules/leviosa3.jpg",
+    description: "Sort de lévitation, enseigné dès la première année. Permet de faire flotter des objets et de résoudre des situations délicates grâce à la précision et à la concentration.",
   },
   {
     id: "3",
@@ -24,10 +24,10 @@ export const formulesMagiques: FormuleMagiqueItem[] = [
   },
   {
     id: "4",
-    titre: "Wingardium Leviosa",
-    date: "Première année",
-    photo: "/src/assets/images/formules/leviosa3.jpg",
-    description: "Sort de lévitation, enseigné dès la première année. Permet de faire flotter des objets et de résoudre des situations délicates grâce à la précision et à la concentration.",
+    titre: "Expelliarmus",
+        date: "Troisième année",
+    photo: "/src/assets/images/formules/expeliarmus.jpg",
+    description: "Sortilège de désarmement. Harry l’utilise pour neutraliser ses adversaires sans les blesser, devenant sa technique emblématique dans tous les duels.",
   },
   {
   id: "5",
