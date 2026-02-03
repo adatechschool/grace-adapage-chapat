@@ -18,7 +18,7 @@ function Home() {
       */}
       <img
         src="/src/assets/images/Harry_Potter_04.jpg"
-        alt="Harry Potter"
+        alt="Harry Potter desktop"
         className="
           absolute inset-0
           hidden md:block

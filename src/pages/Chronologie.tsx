@@ -4,52 +4,78 @@ import { chronologie } from "../data/chronologie";
 import type { ChronologieItem } from "../type/interfaces";
 
 function ChronologiePage() {
-  // Élément actuellement ouvert dans la modal
+  // ===============================
+  // STATE — carte active (modal)
+  // ===============================
   const [activeItem, setActiveItem] = useState<ChronologieItem | null>(null);
 
   return (
-    <section className="relative py-10 md:py-20 flex flex-col items-center">
-      {/*Titre*/}
-      <h1 className="text-red-900 text-4xl font-black text-center mb-12 md:mb-12">
+    // SECTION PAGE — centrée
+    <section className="relative py-10 md:py-20 max-w-940px mx-auto px-4">
+      
+      {/* TITRE */}
+      <h1 className="text-red-900 text-4xl font-black text-center mb-12">
         Quelques dates importantes
       </h1>
 
-      {/*Conteneur timeline*/}
-      <div className="relative w-full max-w-5xl px-4 flex flex-col items-center">
-        {/* Axe central */}
+      {/* CONTENEUR TIMELINE
+          (référence pour l’axe) */}
+      <div className="relative">
+
+        {/* AXE CENTRAL */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-3 bg-yellow-400 z-0" />
 
-        {/* Liste des cartes */}
-        <div className="flex flex-col space-y-4 md:space-y-16 w-full">
+        {/*  LISTE DES CARTES */}
+        <div className="flex flex-col space-y-12 md:space-y-20">
+
           {chronologie.map((item, index) => {
             const isLeft = index % 2 === 0;
 
             return (
-              <div
-                key={item.id}
-                className={`relative flex w-full ${
-                  isLeft
-                    ? "justify-start pr-2 md:pr-4"
-                    : "justify-end pl-1 md:pl-1"
-                }`}
-              >
-                {/* Largeur fixe des cartes = stabilité */}
-                <div className="w-80 md:max-w-2xl">
-                  <Card
-                    title={item.titre}
-                    subtitle={item.date}
-                    description={item.description}
-                    image={item.photo}
-                    onReadMore={() => setActiveItem(item)}
-                  />
+              // ===============================
+              // LIGNE DE TIMELINE
+              // (centre sur l’axe)
+              // ===============================
+              <div key={item.id} className="relative flex justify-center w-full">
+
+                {/* ===============================
+                    WRAPPER DE CARTE
+                    - centré par défaut (mobile)
+                    - décalé seulement en md+
+                =============================== */}
+                <div
+                  className={`
+                    relative
+                    w-full max-w-md
+                    ${isLeft
+                      ? "md:-translate-x-24"
+                      : "md:translate-x-24"}
+                  `}
+                >
+                  {/* ===============================
+                      CARTE
+                      (largeur stable)
+                  =============================== */}
+                  <div className="w-full">
+                    <Card
+                      title={item.titre}
+                      subtitle={item.date}
+                      description={item.description}
+                      image={item.photo}
+                      onReadMore={() => setActiveItem(item)}
+                    />
+                  </div>
                 </div>
+
               </div>
             );
           })}
         </div>
       </div>
 
-      {/*MODAL LIRE PLUS*/}
+      {/* ===============================
+          MODAL — LIRE PLUS
+      =============================== */}
       {activeItem && (
         <div className="fixed inset-5 z-50 flex items-center justify-center bg-black/60">
           <div className="relative bg-white rounded-xl max-w-3xl w-full mx-4 p-6 md:p-8">
