@@ -24,12 +24,12 @@ function Home() {
           hidden md:block
           object-cover
 
-          /* Limitation forte de largeur */
+          
           max-w-300
           mx-auto
           left-1/2 -translate-x-1/2
 
-          /* Zoom doux */
+          
           scale-110
           group-hover:scale-125
           transition-transform duration-3000 ease-out

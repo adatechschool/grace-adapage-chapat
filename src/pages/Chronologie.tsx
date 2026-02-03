@@ -4,9 +4,7 @@ import { chronologie } from "../data/chronologie";
 import type { ChronologieItem } from "../type/interfaces";
 
 function ChronologiePage() {
-  // ===============================
-  // STATE — carte active (modal)
-  // ===============================
+
   const [activeItem, setActiveItem] = useState<ChronologieItem | null>(null);
 
   return (
@@ -32,17 +30,16 @@ function ChronologiePage() {
             const isLeft = index % 2 === 0;
 
             return (
-              // ===============================
+            
               // LIGNE DE TIMELINE
-              // (centre sur l’axe)
-              // ===============================
-              <div key={item.id} className="relative flex justify-center w-full">
+          
+            <div key={item.id} className="relative flex justify-center w-full">
 
-                {/* ===============================
-                    WRAPPER DE CARTE
+                {/* 
+                    CARTE
                     - centré par défaut (mobile)
                     - décalé seulement en md+
-                =============================== */}
+                */}
                 <div
                   className={`
                     relative
@@ -52,10 +49,10 @@ function ChronologiePage() {
                       : "md:translate-x-24"}
                   `}
                 >
-                  {/* ===============================
+                  {/* 
                       CARTE
                       (largeur stable)
-                  =============================== */}
+                   */}
                   <div className="w-full">
                     <Card
                       title={item.titre}
@@ -73,9 +70,7 @@ function ChronologiePage() {
         </div>
       </div>
 
-      {/* ===============================
-          MODAL — LIRE PLUS
-      =============================== */}
+      {/* MODAL — LIRE PLUS */}
       {activeItem && (
         <div className="fixed inset-5 z-50 flex items-center justify-center bg-black/60">
           <div className="relative bg-white rounded-xl max-w-3xl w-full mx-4 p-6 md:p-8">
